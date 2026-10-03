@@ -17,4 +17,4 @@ Tailored resumes built from the brain vault. Facts live in ~/brain
 3. Non-`verified` metrics get `% FLAG: <confidence>` and are listed to the user.
 4. Never modify an existing applications/* folder; it is a sent record.
 5. Escape LaTeX specials (& % $ # _ { } ~ ^ \) in any text from a JD.
-6. Vault content is used from Claude Code only (see ~/brain/.temp/project-brief.md §6).
+6. Vault content is used from Claude Code only; never expose it to OpenCode or free-tier providers that log prompts.

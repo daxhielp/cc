@@ -38,4 +38,6 @@ git -C "$tmp" init -q && git -C "$tmp" add applications && git -C "$tmp" -c user
 before=$(md5sum <"$s/daxhielperugorria_resume.pdf")
 "$tmp/scripts/build-resume" "$s/resume.tex" >/dev/null 2>&1; rc=$?
 check "sent pdf protected" '[[ $rc -eq 1 && $(md5sum <"$s/daxhielperugorria_resume.pdf") == "$before" ]]'
+err=$("$tmp/scripts/build-resume" "$tmp/b/ok/resume.tex" "$tmp/nodir/x.pdf" 2>&1 >/dev/null); rc=$?
+check "missing out dir rejected" '[[ $rc -eq 1 && $err == *"no such directory"* ]]'
 exit $fail

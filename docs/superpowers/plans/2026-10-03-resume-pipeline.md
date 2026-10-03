@@ -331,7 +331,7 @@ The vault is empty today: `person` is blank and `roles: []`. No resume content c
      nice-to-haves, seniority, and the 10–15 keywords an ATS would match.
      If company or role is ambiguous, ask.
   2. **Pick a starting point.** First check freshness: compare the master's
-     `% GENERATED FROM ~/brain on <date>` line with
+     `% GENERATED FROM ~/brain on <YYYY-MM-DDTHH:MM:SS±HH:MM>` line (full ISO-8601 timestamp) with
      `git -C ~/brain log -1 --format=%cs -- facts experience projects`.
      If the vault is newer, tell the user and offer to regenerate the master
      before continuing. Then read templates/INDEX.md and the master. Choose
@@ -390,7 +390,7 @@ The vault is empty today: `person` is blank and `roles: []`. No resume content c
   - Include **every** role, education entry, certification, and project in the vault, in reverse-chronological order, with dates and titles copied exactly from the YAML.
   - Write several bullets per role, drawing on `experience/<id>.md` for narrative. Every number comes from the YAML `metrics`. Non-`verified` metrics get `% FLAG: <confidence>`.
   - Contact details come only from YAML `person` fields. If they are absent, leave them out and tell the user. Never pull them from session context.
-  - At the top, add the line `% GENERATED FROM ~/brain on <YYYY-MM-DD>. Edit the vault, then regenerate; don't hand-edit facts here.`
+  - At the top, add the line `% GENERATED FROM ~/brain on <YYYY-MM-DDTHH:MM:SS±HH:MM>. Edit the vault, then regenerate; don't hand-edit facts here.`
 - [ ] **Step 2:** Build: `RESUME_MAX_PAGES=99 scripts/build-resume master/master_resume.tex master/master_resume.pdf`. Expected: `master/master_resume.pdf` is created.
 - [ ] **Step 3: Fact audit:** Check every date, title, org, and number in the `.tex` against `~/brain/facts/timeline.yaml`; prose doesn't count for numbers. Any miss is a bug; remove it. Re-derive FLAGs from the YAML `confidence` values. Show the user the PDF and the FLAG list.
 - [ ] **Step 4:** Commit: `feat: master resume from vault`

@@ -6,6 +6,7 @@ root="$(cd "$(dirname "$0")/.." && pwd)"
 tex="$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
 name=$(basename "$tex" .tex)
 out="${2:-$(dirname "$tex")/daxhielperugorria_resume.pdf}"
+[[ -d $(dirname "$out") ]] || { echo "no such directory: $(dirname "$out")" >&2; exit 1; }
 out="$(cd "$(dirname "$out")" && pwd)/$(basename "$out")"
 case $out in
   "$root"/applications/*)

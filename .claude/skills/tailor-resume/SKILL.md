@@ -14,8 +14,9 @@ confirm the text with the user). Repo root: ~/Professional/cc.
    nice-to-haves, seniority, and the 10–15 keywords an ATS would match.
    If company or role is ambiguous, ask.
 2. **Pick a starting point.** First check freshness: compare the master's
-   `% GENERATED FROM ~/brain on <date>` line with
-   `git -C ~/brain log -1 --format=%cs -- facts experience projects`.
+   `% GENERATED FROM ~/brain on <YYYY-MM-DDTHH:MM:SS±HH:MM>` line (a full
+   ISO-8601 timestamp) with
+   `git -C ~/brain log -1 --format=%cI -- facts experience projects`.
    If the vault is newer, tell the user and offer to regenerate the master
    before continuing. Then read templates/INDEX.md and the master. Choose
    the template whose branch and keywords overlap the JD most; if none
@@ -32,14 +33,15 @@ confirm the text with the user). Repo root: ~/Professional/cc.
      If the JD wants something the vault lacks, list it to the user as a
      gap; offer /brain-interview if they have the experience.
    - Escape LaTeX specials in any copied text: & % $ # _ { } ~ ^ \.
-5. **Fact audit.** Diff `<dir>/resume.tex` against the seed it was copied
-   from. For every changed or added line:
+5. **Fact audit.** Audit EVERY line of the final `<dir>/resume.tex`
+   (one page), including content carried in from a template. For every date,
+   title, org, number, and skill:
    - Each date, title, org, and number must match a field in
      ~/brain/facts/timeline.yaml. Numbers in experience/ prose don't count.
    - Each skill or tool must appear in the vault.
-   - Any metric whose YAML `confidence` is not `verified` gets
-     `% FLAG: <confidence>`. Derive this from the YAML; don't trust
-     existing comments.
+   - Any fact whose YAML entry's `confidence` is not `verified` gets
+     `% FLAG: <confidence>`. Re-derive every FLAG from the YAML; don't
+     trust existing comments.
 
    Remove anything that fails.
 6. **Build:** `scripts/build-resume <dir>/resume.tex` to produce
