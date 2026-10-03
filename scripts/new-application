@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+usage() { echo "usage: new-application <company> <role> [source.tex]" >&2; exit 2; }
+[[ $# -ge 2 && $# -le 3 ]] || usage
+root="$(cd "$(dirname "$0")/.." && pwd)"
+slug() {
+  printf '%s' "$1" | LC_ALL=C.UTF-8 iconv -f utf-8 -t ascii//TRANSLIT \
+    | sed -E 's/&/and/g; s/[^A-Za-z0-9]+/-/g; s/^-+|-+$//g'
+}
+company=$(slug "$1") && role=$(slug "$2") || { echo "company/role must be valid UTF-8" >&2; exit 2; }
+[[ -n $company && -n $role ]] || { echo "company and role need letters or digits" >&2; exit 2; }
+src="${3:-$root/master/master_resume.tex}"
+[[ -f $src ]] || { echo "source not found: $src" >&2; exit 1; }
+base="$root/applications/${RESUME_DATE:-$(date +%F)}_${company}_${role}"
+dir=$base; n=2
+while [[ -e $dir ]]; do dir="$base-$n"; n=$((n + 1)); done
+mkdir -p "$dir"
+cp "$src" "$dir/resume.tex"
+printf '%s\n' "$dir"
