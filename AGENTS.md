@@ -12,8 +12,10 @@ Tailored resumes built from the brain vault. Facts live in ~/brain
 
 ## Rules
 1. To tailor a resume to a job description, use the `tailor-resume` skill.
-2. Never put a fact on a resume that isn't in ~/brain/facts/timeline.yaml
-   or ~/brain/experience|projects. Missing → say so, offer /brain-interview.
+2. Never put a fact on a resume that isn't in ~/brain/facts/timeline.yaml,
+   ~/brain/experience|projects, or reference/current_resume.pdf (the user's
+   own resume). timeline.yaml wins conflicts; never reuse claims the vault
+   retracted. Missing → say so, offer /brain-interview.
 3. Non-`verified` metrics get `% FLAG: <confidence>` and are listed to the user.
 4. Never modify an existing applications/* folder; it is a sent record.
 5. Escape LaTeX specials (& % $ # _ { } ~ ^ \) in any text from a JD.

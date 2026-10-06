@@ -25,23 +25,42 @@ confirm the text with the user). Repo root: ~/Professional/cc.
    Capture the folder path that the script prints as `<dir>`. Save the JD
    verbatim to `<dir>/job_description.md`.
 4. **Tailor `<dir>/resume.tex`:**
-   - Select and order roles/bullets by relevance to the JD; drop the rest.
-   - Rephrase bullets to use the JD's vocabulary **only where the vault
-     supports the claim**. Every fact traces to ~/brain/facts/timeline.yaml
-     (dates/titles/metrics win) or ~/brain/experience|projects.
-   - Never add a skill, tool, metric, or responsibility not in the vault.
-     If the JD wants something the vault lacks, list it to the user as a
-     gap; offer /brain-interview if they have the experience.
+   - Sources, in order of authority: (1) ~/brain/facts/timeline.yaml
+     (dates/titles/metrics win); (2) ~/brain/experience|projects; (3) the
+     reference resume (`reference/current_resume.pdf`, same text as
+     ~/brain/archive/2026-current-resume.md) for skills, coursework,
+     locations, and bullet content. Where they conflict, the higher source
+     wins. Never reuse reference claims the vault has retracted (86 tests /
+     90% coverage, "zero-dependency", "open-source", "reverse-engineered",
+     "architected" the Transformer, "2 models", "200+ attendees"); read the
+     `resume wording rules` comments in timeline.yaml first.
+   - **Density:** the result must be at least as full as the reference
+     resume, filling the one page. Do not drop real content just to look
+     minimal; cut only what is irrelevant to the JD, and fill the freed space
+     with more JD-relevant detail (education coursework, skills, fuller
+     bullets, relevant roles from the reference).
+   - **Focus:** reorder and reword so the JD's skills lead: skills section
+     first-class and ordered by JD priority, JD-relevant coursework listed,
+     most relevant projects/roles first. Use the JD's exact terms where true.
+   - **ATS:** one column, standard headings (Education, Technical Skills,
+     Experience, Projects), plain text, no tables/icons/colors, dates with
+     month and year, spell out acronyms once, every JD keyword the user
+     genuinely has appears verbatim at least once.
+   - Never add a skill, tool, metric, or responsibility not in any source
+     above. If the JD wants something none of them has, list it as a gap;
+     offer /brain-interview if they have the experience.
    - Escape LaTeX specials in any copied text: & % $ # _ { } ~ ^ \.
 5. **Fact audit.** Audit EVERY line of the final `<dir>/resume.tex`
    (one page), including content carried in from a template. For every date,
    title, org, number, and skill:
-   - Each date, title, org, and number must match a field in
-     ~/brain/facts/timeline.yaml. Numbers in experience/ prose don't count.
-   - Each skill or tool must appear in the vault.
+   - Each date, title, org, and number must match timeline.yaml where it has
+     the field; numbers found only in the reference must also not be on the
+     retracted list above. Numbers in experience/ prose don't count.
+   - Each skill or tool must appear in the vault or the reference resume.
    - Any fact whose YAML entry's `confidence` is not `verified` gets
-     `% FLAG: <confidence>`. Re-derive every FLAG from the YAML; don't
-     trust existing comments.
+     `% FLAG: <confidence>`. Facts sourced only from the reference (not in
+     the YAML) get `% FLAG: reference-only` and are listed to the user.
+     Re-derive every FLAG; don't trust existing comments.
 
    Remove anything that fails.
 6. **Build:** `scripts/build-resume <dir>/resume.tex` to produce
