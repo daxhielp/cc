@@ -1,0 +1,62 @@
+<!-- Source: https://jobs.smartrecruiters.com/NBCUniversal3/744000161179529 (fetched 2026-11-13 via the job board's public API/page; text verbatim) -->
+
+# Software Engineering Internships – Summer 2027
+
+Location: Universal City, CA, United States
+
+## Company Description
+
+NBCUniversal is one of the world's leading media and entertainment companies. We create world-class content, which we distribute across our portfolio of film, television, and streaming, and bring to life through our global theme park destinations, consumer products, and experiences. We own and operate leading entertainment and news brands, including NBC, NBC News, NBC Sports, Telemundo, NBC Local Stations, Bravo, and Peacock, our premium ad-supported streaming service. We produce and distribute premier filmed entertainment and programming through our powerhouse film and television studios, including Universal Pictures, DreamWorks Animation, and Focus Features, and the four global television studios under the Universal Studio Group banner, and operate industry-leading theme parks and experiences around the world through Universal Destinations & Experiences, including Universal Orlando Resort, home to Universal Epic Universe, and Universal Studios Hollywood. NBCUniversal is a subsidiary of Comcast Corporation. Visit www.nbcuniversal.com for more information.
+Our impact is rooted in improving the communities where our employees, customers, and audiences live and work. We have a rich tradition of giving back and ensuring our employees have the opportunity to serve their communities. We champion an inclusive culture and strive to attract and develop a talented workforce to create and deliver a wide range of content reflecting our world.
+
+## Job Description
+
+Your future in media starts here. The NBCUniversal Summer Internship Program is your chance to help shape what’s next in media and entertainment. Whether you’re supporting major news coverage, creating content for iconic brands, or contributing to innovative projects, you’ll bring your ideas, creativity, and perspective to make an impact throughout your internship.
+Beyond your day-to-day role, you’ll take part in a thoughtfully designed program focused on career development, building your professional presence, and growing your workplace confidence. Through real-world experience and a community of fellow interns, you’ll explore what’s possible in this ever changing and exciting industry.
+In addition to all of our internships being paid, we will also offer the following for our Summer 2027 interns:   
+- Paid company holidays for full-time interns.  
+- Robust networking, learning and development opportunities.
+- Complimentary Peacock subscription during your internship.
+- Free admission to Universal Parks to use during your internship.
+- Access to mental health resources including counseling sessions.
+- Financial assistance to offset expenses for transportation and housing may be available on a needs-based basis for eligible in-person interns. More details about eligibility for this assistance will be provided at the time of offer. 
+- At our Universal City office interns will have access to the NBCUCommutes program, which provides fully subsidized transit passes to full-time lower lot employees, good for unlimited rides on all Metro bus and rail, such as the Metro Red Line.
+Summer 2027 Program Details
+Program Dates: June 7 – August 13, 2027
+Time Commitment: 40 hours per week. Exact schedule to be determined based on business need. 
+Format: Opportunities listed will require an intern to work from Universal City, CA.
+Summer 2027 Recruitment Timeline
+November 9 – December 4: Applications Open (may close early due to applicant volume)  
+Mid November – Late December: First round video interviews   
+Mid – Late January: Second round interviews  
+Late January – February: Selected candidates receive offers  
+To Apply:
+- Submit a one-page resume that outlines your work experience, accomplishments, and your graduation month and year.
+- Submit a cover letter that highlights your passion for NBCUniversal and your top areas of interest (opportunities listed below).
+- Upload a transcript (unofficial transcripts are fine) that confirms your status as an actively enrolled student in a degree-granting program.
+NBCU Corporate: NBCUniversal's Corporate groups are uniquely positioned at the core of our organization.  Employees within these groups use their area of expertise to support all businesses across the company, keeping the heart of each brand at the forefront.
+Areas of placement may include, but are not limited to:
+- IP Security & Technology, Software Development: The IP Analytics, Operations, and Technology team under the Corporate Legal division supports all of NBCUniversal’s content globally with security procedures across the supply chain, Digital Fingerprinting of all NBCUniversal owned content, monitoring & takedown services for digital theft platforms and business intelligence services to measure the demand and supply sides of piracy. In this internship, you can expect to write and review others’ code, debug and test, help design cloud and application architecture, deploy to production, and learn about networking, databases, and other components of our applications. All the while, you'll be using modern frameworks, languages, libraries, and methodologies to help us build world-class apps and services!
+
+## Qualifications
+
+Basic Requirements:
+- Must be actively enrolled in a degree-granting program at an accredited institution during the entire duration of the program. Spring 2027 graduates are not eligible for our Summer 2027 internship program. 
+- Current class standing of sophomore or above (30 credits).
+- Must be presently authorized to work for any employer in the United States and must not require work visa sponsorship from NBCUniversal now or in the future to retain authorization to work in the United States.
+- Must be available to work 40 hours per week from June 7 – August 13, 2027.
+- Must be willing to work in Universal City, CA.
+For further clarification, candidates currently on any student or exchange visa (e.g. F-1 CPT, F-1 OPT, J-1, M-1) are not eligible to apply unless they will be able to change or adjust to another status that grants work authorization without NBCUniversal sponsorship.
+NBCUniversal is an E-Verify company, requiring all employees to have an active Social Security number. Any candidate receiving an internship offer must complete I-9 form with Social Security number within 3 days of hire. 
+Desired Characteristics:
+- Students with class standing of junior or above preferred.
+- Cumulative GPA of 3.0 or above.
+- Intermediate computing skills and intermediate-advanced Excel skills.
+The hourly rate for student interns is $30.00.
+
+## Additional Information
+
+As part of our selection process, external candidates may be required to attend an in-person interview with an NBCUniversal employee at one of our locations prior to a hiring decision. NBCUniversal's policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law.
+NBCUniversal will consider for employment qualified applicants with criminal histories, or arrest or conviction records, in a manner consistent with relevant legal requirements, including the City of Los Angeles' Fair Chance Initiative For Hiring Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act, where applicable.
+If you are a qualified individual with a disability or a disabled veteran and require support throughout the application and/or recruitment process as a result of your disability, you have the right to request a reasonable accommodation. You can submit your request to AccessibilitySupport@nbcuni.com.
+
