@@ -1,0 +1,75 @@
+\documentclass{resume}
+\begin{document}
+
+\resumeName{Daxhiel Perugorria Ruciel}
+\resumeContact{(469) 673-9154\resumeSep daxperugorria@gmail.com\resumeSep \resumeLink{https://daxhielp.github.io}{daxhielp.github.io}\resumeSep \resumeLink{https://linkedin.com/in/daxhielp}{linkedin.com/in/daxhielp}\resumeSep \resumeLink{https://github.com/daxhielp}{github.com/daxhielp}}
+
+\section{Education}
+\resumeSubHeadingListStart
+% Graduation month (May 2029) supplied by user 2026-10-05, now in timeline.yaml
+% FLAG: reference-only (Austin, TX location; start year 2025 is in timeline comment)
+% FLAG: recalled (coursework list; confirmed by user 2026-10-05; "Computer Systems" per timeline.yaml)
+\resumeSubheading{University of Texas at Austin}{2025 -- Expected May 2029}{Bachelor of Science in Computer Science}{Austin, TX}
+\resumeItemListStart
+\resumeItem{\textbf{Relevant Coursework:} Data Structures and Algorithms, Computer Systems, Computer Organization and Architecture, Discrete Mathematics, Linear Algebra, Probability and Statistics}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\resumeSkillListStart
+% FLAG: recalled (skills lists; confirmed by user 2026-10-05, self-reported). Languages and tools are in timeline.yaml skills; pytest, asyncio, WebSocket, REST, scikit-learn, LightGBM, XGBoost, Tailwind, Formspree, Cloudinary are in project/role stacks or specs.
+\resumeItem{\textbf{Languages:} Python, Java, C/C++, Rust, JavaScript, SQL}
+\resumeItem{\textbf{Software Development:} FastAPI, WebSocket, asyncio, pytest, Express, Next.js, React, Tailwind CSS, Linux, Vercel, Supabase, OpenMCT}
+\resumeItem{\textbf{Data \& Machine Learning:} PyTorch, scikit-learn, LightGBM, XGBoost, Tableau, Data Visualization}
+\resumeSkillListEnd
+
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{ECLAIR, UT Austin}{Sep 2026 -- Present}{Software Developer}{}
+\resumeItemListStart
+\resumeItem{Developer on Project AMAZE, an autonomous Crazyflie drone project with a team of about 15; on the dashboard team that displays real-time drone telemetry in OpenMCT.} % FLAG: recalled (confirmed by user 2026-10-05; "~15" per timeline.yaml team_size). 'real-time' per experience/eclair-2026.md ('live')
+\resumeItem{Designed a standalone Python telemetry bridge: a Crazyflie source thread feeding an asyncio hub, served to multiple web clients through a FastAPI REST dictionary endpoint and a WebSocket stream; chose a separate process over modifying OpenMCT to avoid bloating it.} % FLAG: recalled (separate-process decision; confirmed by user); architecture verified in SPEC.md (spec only, not implemented: 'designed', not 'built')
+\resumeItemListEnd
+
+\resumeSubheading{Code2College}{Jun 2026 -- Jul 2026}{Course Instructor}{Remote}
+\resumeItemListStart
+\resumeItem{Instructed 24+ students over an 18-session curriculum, with 95\% average attendance and 97\% average quiz score.}
+\resumeItem{Taught Python programming, object-oriented design, error handling, and basic data management.} % FLAG: reference-only (Code2College curriculum topics)
+\resumeItemListEnd
+
+\resumeSubheading{Getfertilizerwiser}{Feb 2026 -- May 2026}{Freelance Web Developer}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Built a full-stack Next.js/React web application for a nonprofit client, with a token-driven Tailwind design system and reusable component library keeping 7 client-facing pages visually consistent without a CMS.} % FLAG: reference-only (nonprofit client, token-driven design system, component library, Austin TX); 7 pages verified, stack verified
+\resumeItemListEnd
+
+\resumeSubheading{Austin Spanish First AV}{Jul 2026 -- Present}{Subdirector}{}
+\resumeItemListStart
+\resumeItem{Direct a 10+ member technical team coordinating audio/visual delivery for 400+ weekly attendees.} % verified (team_size 10, 400+); "coordinating" FLAG: reference-only
+\resumeItem{Redesigned the audio and live-stream setup, growing online viewership by 50\%.} % verified
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{qumixer-py} $|$ \emph{Python Library for Allen \& Heath Qu-series Mixers}}{Sep 2026}
+\resumeItemListStart
+\resumeItem{Implemented the vendor MIDI-over-TCP protocol (corrected against real hardware) as sync and async APIs (QuMixer/AsyncQuMixer) with a tiered parameter registry.}
+\resumeItem{Built a fake console emulator with golden-vector fixtures for hardware-free testing of the encode/decode path, plus probe, monitor, and record/replay CLI tools.}
+\resumeItem{Debugged protocol mismatches with AI agents: a Claude agent ran tests on the physical mixer and reported gaps against the vendor reference for a second agent to fix.} % FLAG: recalled (projects/qumidi.md, not in timeline.yaml)
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Datahack 2026} $|$ \emph{Skip-Prediction Machine Learning Model}}{Mar 2026}
+\resumeItemListStart
+\resumeItem{Team of 4 in UT Austin's MLDS hackathon; 1st of 5 finalists on the organizers' performance score; Transformer + LightGBM ensemble reached 86.50\% validation accuracy vs. an 83.77\% baseline.} % FLAG: recalled (finalist count, ranking; confirmed by user); accuracy figures verified (26,899-sample split)
+\resumeItem{Co-designed the data pipeline and session tokenization; ran XGBoost and LSTM baselines; built most of the presentation.} % FLAG: recalled (timeline.yaml datahack-2026 role, from interview)
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{VibeDungeon} $|$ \emph{AI Agent-Driven Game}}{May 2026 -- Jun 2026}
+\resumeItemListStart
+\resumeItem{Solo-designed a Python dungeon crawler with an LLM agent layer isolated from core game logic, validating tool-call arguments against numeric ranges and enum allowlists; mostly written with AI tools.}
+\resumeItem{Replaced a generic agent with repetitive output by 6 specialized agents on a shared BaseAgent (tool loop, token limits, retries, fallbacks), provider-agnostic via the OpenAI SDK.} % BaseAgent + 6 agents verified (agents/base.py); FLAG: recalled (generic-to-specialized switch, provider history)
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
