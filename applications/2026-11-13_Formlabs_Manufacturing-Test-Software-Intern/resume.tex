@@ -1,0 +1,75 @@
+\documentclass{resume}
+\begin{document}
+
+\resumeName{Daxhiel Perugorria Ruciel}
+\resumeContact{(469) 673-9154\resumeSep daxperugorria@gmail.com\resumeSep \resumeLink{https://daxhielp.github.io}{daxhielp.github.io}\resumeSep \resumeLink{https://linkedin.com/in/daxhielp}{linkedin.com/in/daxhielp}\resumeSep \resumeLink{https://github.com/daxhielp}{github.com/daxhielp}}
+
+\section{Education}
+\resumeSubHeadingListStart
+% verified: institution, degree, May 2029 end (timeline.yaml education)
+% FLAG: reference-only (Austin, TX location; start year 2025 from timeline comment)
+% FLAG: recalled (coursework list; confirmed by user 2026-10-05)
+\resumeSubheading{University of Texas at Austin}{2025 -- Expected May 2029}{Bachelor of Science in Computer Science}{Austin, TX}
+\resumeItemListStart
+\resumeItem{\textbf{Relevant Coursework:} Computer Organization and Architecture, Computer Systems, Probability and Statistics, Data Structures and Algorithms, Discrete Mathematics, Linear Algebra}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\resumeSkillListStart
+% FLAG: recalled (languages/tools self-reported in timeline.yaml skills, confirmed 2026-10-05). Other entries come from vault role/project stacks: pytest, Pydantic, Rich, OpenAI SDK, Groq, Gemini (VibeDungeon); scikit-learn, LightGBM, XGBoost, LSTM (Datahack); MIDI-over-TCP, emulator, golden vectors, CLI, Claude agents (qumixer-py); Tailwind, Formspree, Cloudinary (Getfertilizerwiser); Microsoft Access, Excel, GitHub (Project Advance). FLAG: judgment call -- 'REST APIs' rests on FastAPI/Express (recalled skills) and the HTTP LLM-provider APIs used via the OpenAI SDK.
+\resumeItem{\textbf{Languages:} Python, SQL, C/C++, Java, JavaScript, Rust}
+\resumeItem{\textbf{Test \& Hardware Tools:} hardware-free test harnesses, device emulators, golden-vector fixtures, pytest, MIDI-over-TCP, audio/live-stream hardware, Linux}
+\resumeItem{\textbf{Data \& Software:} scikit-learn, LightGBM, XGBoost, Tableau, Data Visualization, Pydantic, Claude agents}
+\resumeSkillListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{qumixer-py} $|$ \emph{Python Library for Allen \& Heath Qu-series Mixers}}{Sep 2026}
+\resumeItemListStart
+\resumeItem{Implemented the vendor's MIDI-over-TCP protocol from its published reference, then corrected parameters against the physical mixer where the reference was off.} % projects/qumidi.md (interview); not 'reverse-engineered'
+\resumeItem{Built a fake console emulator with golden-vector fixtures so the encode/decode path is tested without the hardware.} % projects/qumidi.md; no test counts or coverage (retracted)
+\resumeItem{Used AI agents to debug protocol mismatches: a Claude agent ran test scripts on the hardware, compared results with the vendor reference, and wrote a report for a second agent to implement fixes.} % FLAG: recalled (projects/qumidi.md, interview; not in timeline.yaml)
+\resumeItem{Exposed matching synchronous and asynchronous APIs (QuMixer/AsyncQuMixer) over a tiered parameter registry, plus probe, monitor and record/replay command-line tools.} % projects/qumidi.md
+\resumeItem{Kept AI features out of the library to limit complexity, so it serves as a clean base for planned agentic mixing and new-member onboarding tools.} % FLAG: recalled (projects/qumidi.md 'What I decided against', interview)
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Datahack 2026} $|$ \emph{Skip-Prediction Machine Learning Model (Python, LightGBM, scikit-learn)}}{Mar 2026}
+\resumeItemListStart
+\resumeItem{Co-designed the data pipeline and session tokenization; explored the data and ran baseline models (XGBoost, then an LSTM); built most of the presentation.} % timeline.yaml datahack role (interview)
+\resumeItem{Team's causal Transformer + LightGBM weighted ensemble reached 86.50\% validation accuracy vs. an 83.77\% starter baseline (26,899-sample split).} % verified (task1_solution.ipynb); Transformer written by a teammate -- 'Team's'
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{VibeDungeon} $|$ \emph{AI Agent-Driven Game (Python, Pydantic, OpenAI SDK, pytest)}}{May 2026 -- Jun 2026}
+\resumeItemListStart
+\resumeItem{Solo-designed every system (game engine, agent architecture, tool and validation layer) of a Python dungeon crawler whose large language model (LLM) agent layer is isolated from the core game logic; implementation mostly written with AI tools.} % timeline.yaml vibedungeon role
+\resumeItem{Validated tool-call arguments against numeric ranges and enum allowlists, returning rejected calls as errors so the model self-corrects; capped tool loops at 5 turns (8 for NPCs) and added Pydantic output validation with a retry and fixed fallback.} % verified (agents/base.py, agents/ability.py, agents/encounter.py)
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Experience}
+\resumeSubHeadingListStart
+% verified org/title/dates. FLAG: title still an open question in experience/project-advance-austin-2026.md
+\resumeSubheading{Project Advance Austin}{Aug 2026 -- Present}{Project Management \& Data Analytics}{}
+\resumeItemListStart
+\resumeItem{Migrating a nonprofit's fragmented Microsoft Access/Excel program records into a consolidated database, deduplicating and normalizing records to support repeatable yearly updates (5-student team).} % FLAG: user-approved embellished wording 2026-11-13; whether the migration has started is unconfirmed
+\resumeItem{Building a Tableau geospatial map of 2025 program data (children by county and state, mothers by prison facility, mother--child distance) to support donor fundraising.} % FLAG: user-approved embellished wording 2026-11-13 (county/state/facility grouping is a design idea)
+\resumeItemListEnd
+
+% verified org/title/dates
+\resumeSubheading{Austin Spanish First AV}{Jul 2026 -- Present}{Subdirector}{}
+\resumeItemListStart
+\resumeItem{Direct a 10+ member technical team coordinating audio/visual delivery for 400+ weekly attendees.} % verified (team_size 10, 400+); FLAG: reference-only ('coordinating')
+\resumeItem{Redesigned the audio and live-stream setup, growing online viewership by 50\%.} % verified
+\resumeItemListEnd
+
+\resumeSubheading{Code2College}{Jun 2026 -- Jul 2026}{Course Instructor}{Remote}
+\resumeItemListStart
+\resumeItem{Instructed 24+ students over an 18-session curriculum, with 95\% average attendance and 97\% average quiz score.} % verified (timeline.yaml metrics)
+\resumeItem{Taught Python programming, object-oriented design, error handling, and basic data management.} % FLAG: reference-only (curriculum topics)
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}
