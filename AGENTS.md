@@ -9,6 +9,7 @@ Tailored resumes built from the brain vault. Facts live in ~/brain
 | templates/INDEX.md | Which template targets which roles |
 | applications/ | One folder per application. Never edit after sending. |
 | scripts/ | new-application, build-resume |
+| claude-setup/ | brain-* skills, global CLAUDE.md, memories; `install.sh` sets up a new machine |
 
 ## Rules
 1. To tailor a resume to a job description, use the `tailor-resume` skill.
