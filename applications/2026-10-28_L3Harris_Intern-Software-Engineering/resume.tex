@@ -1,0 +1,70 @@
+\documentclass{resume}
+\begin{document}
+
+\resumeName{Daxhiel Perugorria Ruciel}
+\resumeContact{(469) 673-9154\resumeSep daxperugorria@gmail.com\resumeSep \resumeLink{https://daxhielp.github.io}{daxhielp.github.io}\resumeSep \resumeLink{https://linkedin.com/in/daxhielp}{linkedin.com/in/daxhielp}\resumeSep \resumeLink{https://github.com/daxhielp}{github.com/daxhielp}}
+
+\section{Education}
+\resumeSubHeadingListStart
+% Graduation month (May 2029) verified in timeline.yaml
+% FLAG: reference-only (Austin, TX location; start year 2025 is in timeline comment)
+% FLAG: recalled (coursework list; confirmed by user 2026-10-05)
+\resumeSubheading{University of Texas at Austin}{2025 -- Expected May 2029}{Bachelor of Science in Computer Science}{Austin, TX}
+\resumeItemListStart
+\resumeItem{\textbf{Relevant Coursework:} Computer Organization and Architecture, Computer Systems, Data Structures and Algorithms, Discrete Mathematics, Linear Algebra, Probability and Statistics}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\resumeSkillListStart
+% FLAG: recalled (languages/tools lists; self-reported, confirmed by user 2026-10-05). pytest, asyncio, WebSocket, REST, scikit-learn, LightGBM, Pydantic, OpenMCT, MIDI-over-TCP are in project/role stacks or specs.
+% FLAG: reference-only (Object-Oriented Design: taught at Code2College per reference resume)
+\resumeItem{\textbf{Languages:} C/C++, Java, Python, SQL, JavaScript, Rust}
+\resumeItem{\textbf{Systems \& Interfaces:} Linux, hardware/software interfaces, MIDI (Musical Instrument Digital Interface) over TCP/IP, real-time telemetry, REST APIs, WebSocket, asyncio, FastAPI, OpenMCT}
+\resumeItem{\textbf{Engineering Practices:} requirements and acceptance criteria, Object-Oriented Design (OOD), software test harnesses and emulators, pytest, input validation, technical documentation, robotics}
+\resumeItem{\textbf{Data, ML \& Web:} PyTorch, scikit-learn, LightGBM, Pydantic, Next.js, React, Tableau}
+\resumeSkillListEnd
+
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{ECLAIR (Engineering \& Computational Learning of AI in Robotics), UT Austin}{Sep 2026 -- Present}{Software Developer}{}
+\resumeItemListStart
+\resumeItem{Software developer on Project AMAZE, an autonomous Crazyflie drone robotics project with a team of about 15; on the dashboard team that displays real-time drone telemetry in OpenMCT.} % FLAG: recalled (confirmed by user 2026-10-05; team_size ~15 per timeline.yaml)
+\resumeItem{Own the design of the backend layer interfacing the drone with the frontends; chose a separate bridge process over modifying OpenMCT so multiple web clients can consume the data.} % FLAG: recalled (confirmed by user)
+\resumeItem{Wrote the requirements spec, with AI assistance, for a Python telemetry bridge: a Crazyflie source thread feeding an asyncio hub, served through a FastAPI REST dictionary and a WebSocket real-time stream, with 12 acceptance criteria, a fake-source mode for hardware-free testing, and bounded per-client queues for slow-client isolation.} % spec facts verified (SPEC.md, commit 64cf533); spec only, not implemented
+\resumeItem{Documented the Telemetry Values API Reference, mapping battery, position, altitude, velocity, attitude, and low-battery, mission-failure, and telemetry-loss warnings to Crazyflie log variables.} % FLAG: recalled (authorship per user)
+\resumeItemListEnd
+
+\resumeSubheading{Austin Spanish First AV}{Jul 2026 -- Present}{Subdirector}{}
+\resumeItemListStart
+\resumeItem{Direct a 10+ member technical team serving 400+ weekly attendees; redesigned the audio and live-streaming infrastructure, growing online viewership by 50\%.} % verified (team_size 10, 400+, 50\%)
+\resumeItemListEnd
+
+\resumeSubheading{Code2College}{Jun 2026 -- Jul 2026}{Course Instructor}{Remote}
+\resumeItemListStart
+\resumeItem{Taught Python programming, object-oriented design, and error handling to 24+ students over an 18-session curriculum, with 95\% average attendance and 97\% average quiz score.} % metrics verified; topics FLAG: reference-only (confirmed by user 2026-10-05)
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{qumidi} $|$ \emph{Python Hardware Control Library for Allen \& Heath Qu-series Mixers}}{Sep 2026}
+\resumeItemListStart
+\resumeItem{Implemented the mixer's MIDI-over-TCP control protocol from the vendor reference as parity sync and async APIs (QuMixer/AsyncQuMixer) with a tiered parameter registry.}
+\resumeItem{Tested against the physical mixer with AI-agent-run test scripts compared to the protocol reference, then repaired parameters where real hardware behavior differed from the documentation.}
+\resumeItem{Built a fake console emulator with golden-vector fixtures for hardware-free testing of the encode/decode path, plus probe, monitor, and record/replay command-line tools.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{VibeDungeon} $|$ \emph{AI Agent-Driven Game (Python, Pydantic, pytest)}}{May 2026 -- Jun 2026}
+\resumeItemListStart
+\resumeItem{Solo-designed the engine, agent architecture, and validation layer of a Python game whose LLM agents are isolated from core logic, with tool-call arguments checked against numeric ranges and enum allowlists; mostly AI-written.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{Datahack 2026} $|$ \emph{Skip-Prediction Machine Learning Model (Python, LightGBM, scikit-learn)}}{Mar 2026}
+\resumeItemListStart
+\resumeItem{Team of 4 in UT Austin's MLDS hackathon and one of 5 finalists; co-designed the data pipeline and session tokenization for a Transformer + LightGBM ensemble that reached 86.50\% validation accuracy vs. an 83.77\% baseline.} % FLAG: recalled (team of 4 verified; finalist count recalled); accuracy figures verified (26,899-sample split)
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
