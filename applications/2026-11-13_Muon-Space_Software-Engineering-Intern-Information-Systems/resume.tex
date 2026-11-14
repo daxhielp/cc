@@ -1,0 +1,75 @@
+\documentclass{resume}
+\begin{document}
+
+\resumeName{Daxhiel Perugorria Ruciel}
+\resumeContact{(469) 673-9154\resumeSep daxperugorria@gmail.com\resumeSep \resumeLink{https://daxhielp.github.io}{daxhielp.github.io}\resumeSep \resumeLink{https://linkedin.com/in/daxhielp}{linkedin.com/in/daxhielp}\resumeSep \resumeLink{https://github.com/daxhielp}{github.com/daxhielp}}
+
+\section{Education}
+\resumeSubHeadingListStart
+% verified: institution, degree, May 2029 end (timeline.yaml education)
+% FLAG: reference-only (Austin, TX location; start year 2025 from timeline comment)
+% FLAG: recalled (coursework list; confirmed by user 2026-10-05)
+\resumeSubheading{University of Texas at Austin}{2025 -- Expected May 2029}{Bachelor of Science in Computer Science}{Austin, TX}
+\resumeItemListStart
+\resumeItem{\textbf{Relevant Coursework:} Data Structures and Algorithms, Computer Systems, Computer Organization and Architecture, Discrete Mathematics, Linear Algebra, Probability and Statistics}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\resumeSkillListStart
+% FLAG: recalled (languages/tools self-reported in timeline.yaml skills, confirmed 2026-10-05). Other entries come from vault role/project stacks: pytest, Pydantic, Rich, OpenAI SDK, Groq, Gemini (VibeDungeon); scikit-learn, LightGBM, XGBoost, LSTM (Datahack); MIDI-over-TCP, emulator, golden vectors, CLI, Claude agents (qumixer-py); Tailwind, Formspree, Cloudinary (Getfertilizerwiser); Microsoft Access, Excel, GitHub (Project Advance). FLAG: judgment call -- 'REST APIs' rests on FastAPI/Express (recalled skills) and the HTTP LLM-provider APIs used via the OpenAI SDK.
+\resumeItem{\textbf{Languages:} JavaScript, Python, SQL, Java, C/C++, Rust}
+\resumeItem{\textbf{Web \& Full-Stack:} React, Next.js, Express, REST (Representational State Transfer) APIs, FastAPI, Supabase, Vercel, Tailwind CSS, GitHub}
+\resumeItem{\textbf{Testing \& Automation:} pytest, Pydantic, Python scripting, command-line tools, Linux}
+\resumeItem{\textbf{AI \& Data:} LLM APIs (OpenAI SDK, Groq), AI coding agents, Tableau, Microsoft Access, Excel}
+\resumeSkillListEnd
+
+\section{Experience}
+\resumeSubHeadingListStart
+% verified org/title/dates/stack; FLAG: reference-only (Austin, TX)
+\resumeSubheading{Getfertilizerwiser}{Feb 2026 -- May 2026}{Freelance Web Developer}{Austin, TX}
+\resumeItemListStart
+\resumeItem{Built a full-stack Next.js/React web application for a nonprofit client, with a token-driven Tailwind CSS design system and reusable component library keeping 7 client-facing pages visually consistent without a content management system (CMS).} % 7 pages + stack verified; FLAG: reference-only (nonprofit client, design system, component library)
+\resumeItem{Structured client content into typed static data models (team bios, events, sponsors, resources), integrated Formspree and Cloudinary for form handling and media delivery, and deployed to production on Vercel.} % Formspree/Cloudinary/Vercel verified (stack); FLAG: reference-only (data models, production deploy)
+\resumeItemListEnd
+
+% verified org/title/dates. FLAG: title still an open question in experience/project-advance-austin-2026.md
+\resumeSubheading{Project Advance Austin}{Aug 2026 -- Present}{Project Management \& Data Analytics}{}
+\resumeItemListStart
+\resumeItem{Migrating a nonprofit's fragmented Microsoft Access/Excel program records into a consolidated database, deduplicating and normalizing records to support repeatable yearly updates (5-student team).} % FLAG: user-approved embellished wording 2026-11-13; whether the migration has started is unconfirmed
+\resumeItem{Own the build of a React/TypeScript site with a Node.js/Express and PostgreSQL backend that embeds the map and links from the client's site (repo, domain, search engine optimization); due March 2027.} % FLAG: user-approved embellished wording 2026-11-13; stack is PLANNED, not built
+\resumeItem{Building a Tableau geospatial map of 2025 program data (children by county and state, mothers by prison facility, mother--child distance) to support donor fundraising.} % FLAG: user-approved embellished wording 2026-11-13 (county/state/facility grouping is a design idea)
+\resumeItemListEnd
+
+\resumeSubheading{Code2College}{Jun 2026 -- Jul 2026}{Course Instructor}{Remote}
+\resumeItemListStart
+\resumeItem{Instructed 24+ students over an 18-session curriculum, with 95\% average attendance and 97\% average quiz score.} % verified (timeline.yaml metrics)
+\resumeItemListEnd
+
+% verified org/title/dates
+\resumeSubheading{Austin Spanish First AV}{Jul 2026 -- Present}{Subdirector}{}
+\resumeItemListStart
+\resumeItem{Direct a 10+ member technical team coordinating audio/visual delivery for 400+ weekly attendees.} % verified (team_size 10, 400+); FLAG: reference-only ('coordinating')
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{qumixer-py} $|$ \emph{Python Library for Allen \& Heath Qu-series Mixers}}{Sep 2026}
+\resumeItemListStart
+\resumeItem{Exposed matching synchronous and asynchronous APIs (QuMixer/AsyncQuMixer) over a tiered parameter registry, plus probe, monitor and record/replay command-line tools.} % projects/qumidi.md
+\resumeItem{Built a fake console emulator with golden-vector fixtures so the encode/decode path is tested without the hardware.} % projects/qumidi.md; no test counts or coverage (retracted)
+\resumeItem{Used AI agents to debug protocol mismatches: a Claude agent ran test scripts on the hardware, compared results with the vendor reference, and wrote a report for a second agent to implement fixes.} % FLAG: recalled (projects/qumidi.md, interview; not in timeline.yaml)
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{VibeDungeon} $|$ \emph{AI Agent-Driven Game (Python, Pydantic, OpenAI SDK, pytest)}}{May 2026 -- Jun 2026}
+\resumeItemListStart
+\resumeItem{Solo-designed every system (game engine, agent architecture, tool and validation layer) of a Python dungeon crawler whose large language model (LLM) agent layer is isolated from the core game logic; implementation mostly written with AI tools.} % timeline.yaml vibedungeon role
+\resumeItem{Validated tool-call arguments against numeric ranges and enum allowlists, returning rejected calls as errors so the model self-corrects; capped tool loops at 5 turns (8 for NPCs) and added Pydantic output validation with a retry and fixed fallback.} % verified (agents/base.py, agents/ability.py, agents/encounter.py)
+\resumeItem{Kept the LLM layer provider-agnostic through the OpenAI SDK, testing Gemini and NVIDIA-hosted Kimi and Qwen before settling on Groq-hosted Llama 3.3 70B for faster inference.} % FLAG: recalled (provider history; Groq model also in .env.example)
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}
