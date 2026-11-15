@@ -50,20 +50,20 @@
 \resumeProjectHeading{\textbf{Datahack 2026} $|$ \emph{Skip-Prediction Recommendation Model (Python, LightGBM, scikit-learn)}}{Mar 2026}
 \resumeItemListStart
 \resumeItem{Team of 4 in UT Austin's MLDS machine learning hackathon; one of 5 finalists, ranked first among them on the organizers' performance score.} % FLAG: recalled (confirmed by user)
-\resumeItem{Co-designed the data pipeline and session tokenization; explored the data and ran baseline models (XGBoost, then an LSTM).}
-\resumeItem{Team's causal Transformer + LightGBM ensemble reached 86.50\% validation accuracy vs. an 83.77\% starter baseline (26,899-sample split).}
+\resumeItem{Co-designed the data pipeline and session tokenization; ran XGBoost and LSTM baselines.}
+\resumeItem{Team's causal Transformer + LightGBM ensemble reached 86.50\% validation accuracy vs. an 83.77\% starter baseline on a 26,899-sample split.}
 \resumeItemListEnd
 
 \resumeProjectHeading{\textbf{qumixer-py} $|$ \emph{Python Library for Allen \& Heath Qu-series Mixers}}{Sep 2026}
 \resumeItemListStart
-\resumeItem{Implemented the MIDI-over-TCP protocol from the vendor reference, then corrected parameters against real hardware where the reference was off.}
-\resumeItem{Built sync and async APIs (QuMixer/AsyncQuMixer) with a tiered parameter registry, a fake console emulator with golden-vector fixtures for hardware-free testing, and probe/monitor/record/replay CLI tools.}
+\resumeItem{Implemented the mixer's network control protocol from the vendor reference, then corrected parameters against real hardware where the reference was wrong.}
+\resumeItem{Built synchronous and asynchronous Python APIs, a software emulator for hardware-free testing, and CLI tools to probe, monitor, record, and replay traffic.}
 \resumeItemListEnd
 
 \resumeProjectHeading{\textbf{VibeDungeon} $|$ \emph{AI Agent-Driven Game (Python, Pydantic, pytest)}}{May 2026 -- Jun 2026}
 \resumeItemListStart
-\resumeItem{Solo-designed every system (engine, agent architecture, tool and validation layer) of a Python dungeon crawler with an LLM agent layer isolated from the core game logic; implementation mostly written with AI tools.}
-\resumeItem{Designed a shared BaseAgent (tool loop, output-token limits, retries/fallbacks) for six agents; validated tool arguments against numeric ranges and enum allowlists and returned rejected calls as errors so the model self-corrects.}
+\resumeItem{Solo-designed every system of a Python game, from the engine to the agent architecture and tool validation layer, keeping the LLM agents isolated from core game logic.}
+\resumeItem{Designed a shared agent base class with tool loop, retries, and fallbacks for six agents; validated tool arguments against numeric ranges and enum allowlists and returned rejected calls as errors so the model self-corrects.}
 \resumeItem{Kept the LLM layer provider-agnostic through the OpenAI SDK, testing Gemini, NVIDIA-hosted Kimi and Qwen, and Groq-hosted Llama 3.3 70B.} % FLAG: recalled (provider history; confirmed by user 2026-10-05)
 \resumeItemListEnd
 \resumeSubHeadingListEnd

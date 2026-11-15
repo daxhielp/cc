@@ -44,8 +44,23 @@ confirm the text with the user). Repo root: ~/Professional/cc.
      most relevant projects/roles first. Use the JD's exact terms where true.
    - **ATS:** one column, standard headings (Education, Technical Skills,
      Experience, Projects), plain text, no tables/icons/colors, dates with
-     month and year, spell out acronyms once, every JD keyword the user
-     genuinely has appears verbatim at least once.
+     month and year, every JD keyword the user genuinely has appears
+     verbatim at least once.
+   - **Style** (user rules, 2026-11-15; these override template wording):
+     - Write for a stranger. Someone who has never seen these projects must
+       understand each bullet. Describe what the project is and does in
+       plain engineering terms; don't copy vault prose verbatim.
+     - Drop project-internal terminology and detail irrelevant to the job:
+       class/module names, internal codenames, file and fixture names.
+     - Prefer the acronym and never spell it out: "REST", not "REST
+       (Representational State Transfer)".
+     - No parenthetical asides in bullets. Fold the content into the
+       sentence or cut it. The tech stack in a project heading is fine.
+     - Never say "MIDI-over-TCP"; say the mixer's network control protocol,
+       or whatever generic description fits the JD.
+     - Never say work was written or generated with AI tools. Stay truthful
+       the other way too: for VibeDungeon say "designed"; never claim the
+       user wrote all the code.
    - Never add a skill, tool, metric, or responsibility not in any source
      above. If the JD wants something none of them has, list it as a gap;
      offer /brain-interview if they have the experience.
@@ -69,21 +84,41 @@ confirm the text with the user). Repo root: ~/Professional/cc.
    or margins below the class defaults. Note: `% FLAG:` warnings from
    build-resume are expected. Read the PDF back with `pdftotext` and check
    it reads in order.
-7. **Report** in chat: the PDF path, what was emphasized/cut, JD keywords
-   covered vs. missing, and every FLAG line. **Wait for the user to confirm
-   flagged claims.** If the user rejects or edits any claim, go back to step 4,
-   tailor again, re-run the fact audit and rebuild, then report again. Once
-   the user confirms all claims, write the report into `<dir>/notes.md`.
-8. **Template promotion.** If this resume targets a role family not in
+7. **Blind review loop.** Spawn the `resume-reviewer` subagent
+   (`.claude/agents/resume-reviewer.md`; it has no file, shell, web, or MCP
+   tools). It must never see the vault or anything about the user. Its
+   prompt contains only:
+   - the JD text, and
+   - the `pdftotext -layout` output of the built PDF with the header
+     removed: no name, phone, email, or links.
+
+   Pass nothing else: no vault excerpts, notes, FLAG comments, or context
+   about the user. It returns `SCORE: n/100` and a numbered fix list. For
+   each fix, apply it if the sources in step 4 support it. If it asks for
+   something the sources lack, don't add it; record it as a gap. Then re-run
+   the fact audit (step 5) and the build (step 6), and spawn a **fresh**
+   reviewer on the new draft. Repeat until a round scores >= 90/100.
+   **Do not come to the user before that.** The one exception: if three
+   rounds in a row stay under 90 only because of fixes you can't make
+   truthfully, stop and report the score and the blocking fixes in step 8.
+   Keep each round's score and fixes for notes.md.
+8. **Report** in chat: the PDF path, what was emphasized/cut, JD keywords
+   covered vs. missing, every FLAG line, the reviewer score for each round,
+   and any reviewer fixes you declined, with the reason. **Wait for the user
+   to confirm flagged claims.** If the user rejects or edits any claim, go
+   back to step 4, tailor again, re-run the fact audit, build, and review
+   loop, then report again. Once the user confirms all claims, write the
+   report into `<dir>/notes.md`.
+9. **Template promotion.** If this resume targets a role family not in
    templates/INDEX.md, propose saving it as `templates/<branch>/resume.tex`
    (remove company-specific phrasing first) and ask. On yes, copy it and add
    an INDEX.md row.
-9. **User confirmation before commit:** Ask the user explicitly: is the resume
+10. **User confirmation before commit:** Ask the user explicitly: is the resume
    final and ready to commit and send? Explain that committing marks the
    application as sent and makes the PDF immutable—build-resume will refuse to
-   overwrite it afterwards. Proceed to step 10 only on a yes.
-10. **Commit once:** `git add <dir>` (and `templates` only if the user agreed to
-   template promotion in step 8), then `git commit -m "apply: <Company> <Role>"`.
+   overwrite it afterwards. Proceed to step 11 only on a yes.
+11. **Commit once:** `git add <dir>` (and `templates` only if the user agreed to
+   template promotion in step 9), then `git commit -m "apply: <Company> <Role>"`.
    After this, `build-resume` refuses to overwrite the PDF.
 
 Never edit an existing applications/* folder; tailor again into a new one.
