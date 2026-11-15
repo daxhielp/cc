@@ -17,26 +17,26 @@
 
 \section{Technical Skills}
 \resumeSkillListStart
-% FLAG: recalled (skills lists; confirmed by user 2026-10-05, self-reported). Languages and tools are in timeline.yaml skills; pytest, asyncio, WebSocket, REST, scikit-learn, LightGBM, XGBoost, Tailwind, Formspree, Cloudinary are in project/role stacks or specs.
+% FLAG: recalled (skills lists; confirmed by user 2026-10-05, self-reported). Languages and tools are in timeline.yaml skills; pytest, REST, scikit-learn, LightGBM, XGBoost, Tailwind, Formspree, Cloudinary are in project/role stacks or specs.
 \resumeItem{\textbf{Languages:} Python, Java, C/C++, JavaScript, Rust, SQL}
-\resumeItem{\textbf{Testing \& Automation:} pytest, hardware-free test harnesses, emulator and golden-vector fixtures, input validation, Python scripting}
-\resumeItem{\textbf{Software Development:} REST APIs, FastAPI, WebSocket, asyncio, Express, Next.js, React, Tailwind CSS, Linux, Vercel, Supabase, OpenMCT}
+\resumeItem{\textbf{Testing \& Automation:} pytest, hardware-free test harnesses, hardware emulators, input validation, Python scripting}
+\resumeItem{\textbf{Software Development:} REST APIs, FastAPI, Express, Next.js, React, Tailwind CSS, Linux, Vercel, Supabase}
 \resumeItem{\textbf{Data \& Machine Learning:} PyTorch, scikit-learn, LightGBM, XGBoost, Tableau, Data Visualization}
 \resumeSkillListEnd
 
 \section{Experience}
 \resumeSubHeadingListStart
-\resumeSubheading{ECLAIR, UT Austin}{Sep 2026 -- Present}{Software Developer}{}
+\resumeSubheading{Project Advance Austin}{Aug 2026 -- Present}{Project Management \& Data Analytics}{}
 \resumeItemListStart
-\resumeItem{Developer on Project AMAZE, an autonomous Crazyflie drone project with a team of about 15; on the dashboard team that displays real-time drone telemetry in OpenMCT.} % FLAG: recalled (confirmed by user 2026-10-05; "~15" per timeline.yaml team_size). 'real-time' per experience/eclair-2026.md ('live')
-\resumeItem{Designed the backend layer between the drone and the frontends.} % FLAG: recalled (confirmed by user)
-\resumeItem{Designed a standalone Python telemetry bridge: a Crazyflie source thread feeding an asyncio hub, served to multiple web clients through a FastAPI REST dictionary endpoint and a WebSocket stream; chose a separate process over modifying OpenMCT to avoid bloating it.} % FLAG: recalled (separate-process decision; confirmed by user); architecture verified in SPEC.md (spec only, not implemented: 'designed', not 'built')
-\resumeItem{Applied SDD with AI assistance: 162-line spec with 12 acceptance criteria, a fake-source mode for hardware-free testing, and bounded per-client queues for slow-client isolation.} % spec facts verified (commit 64cf533); 'SDD' term supplied by user 2026-10-28
+\resumeItem{Migrating a nonprofit's fragmented Access and Excel program records into one consolidated database on a 5-student team, deduplicating and normalizing records to support repeatable yearly updates.} % approved technical wording, experience/project-advance-austin-2026.md (user 2026-11-13; slight embellishment accepted)
+\resumeItem{Building a Tableau geospatial map of program data, grouping children by county and state and mothers by prison facility with mother--child distances, to support donor fundraising.} % approved technical wording, experience/project-advance-austin-2026.md (user 2026-11-13; slight embellishment accepted)
+\resumeItem{Own the build of a React/TypeScript website with a Node.js/Express and PostgreSQL backend that embeds the map, due March 2027.} % approved technical wording, experience/project-advance-austin-2026.md (user 2026-11-13; slight embellishment accepted); stack planned, not built
 \resumeItemListEnd
 
 \resumeSubheading{Getfertilizerwiser}{Feb 2026 -- May 2026}{Freelance Web Developer}{Austin, TX}
 \resumeItemListStart
 \resumeItem{Built a full-stack Next.js/React web application for a nonprofit client, with a token-driven Tailwind design system and reusable component library keeping 7 client-facing pages visually consistent without a CMS.} % FLAG: reference-only (nonprofit client, token-driven design system, component library, Austin TX); 7 pages verified, stack verified
+\resumeItem{Structured client content such as team bios, events, and sponsors into typed static data models, integrated Formspree and Cloudinary for form handling and media delivery, and deployed to production on Vercel.} % FLAG: reference-only
 \resumeItemListEnd
 
 \resumeSubheading{Austin Spanish First AV}{Jul 2026 -- Present}{Subdirector}{}
@@ -48,6 +48,7 @@
 \resumeSubheading{Code2College}{Jun 2026 -- Jul 2026}{Course Instructor}{Remote}
 \resumeItemListStart
 \resumeItem{Instructed 24+ students over an 18-session curriculum, with 95\% average attendance and 97\% average quiz score.}
+\resumeItem{Taught software development fundamentals: Python programming, object-oriented design, error handling, and basic data management.} % FLAG: reference-only (confirmed by user 2026-10-05)
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -56,7 +57,7 @@
 \resumeProjectHeading{\textbf{qumixer-py} $|$ \emph{Python Library for Allen \& Heath Qu-series Mixers}}{Sep 2026}
 \resumeItemListStart
 \resumeItem{Implemented the mixer's network control protocol from the vendor reference, corrected it against real hardware, and exposed it through synchronous and asynchronous Python APIs.}
-\resumeItem{Built a fake console emulator with golden-vector fixtures for hardware-free testing of the encode/decode path, plus probe, monitor, and record/replay CLI tools.}
+\resumeItem{Built a software emulator of the mixer for hardware-free testing of message encoding and decoding, plus CLI tools to probe, monitor, record, and replay traffic.}
 \resumeItemListEnd
 
 \resumeProjectHeading{\textbf{Datahack 2026} $|$ \emph{Skip-Prediction Machine Learning Model (Python, LightGBM, scikit-learn)}}{Mar 2026}
@@ -67,6 +68,7 @@
 \resumeProjectHeading{\textbf{VibeDungeon} $|$ \emph{AI Agent-Driven Game (Python, pytest)}}{May 2026 -- Jun 2026}
 \resumeItemListStart
 \resumeItem{Solo-designed a Python game whose LLM agents run in a layer isolated from core game logic, validating every tool call against allowed ranges and values.}
+\resumeItem{Returned rejected tool calls to the model as errors so it self-corrects, and covered the game logic with pytest.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 

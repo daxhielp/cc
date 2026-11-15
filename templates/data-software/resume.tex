@@ -20,17 +20,16 @@
 % FLAG: recalled (skills lists; confirmed by user 2026-10-05, self-reported). Languages and tools are in timeline.yaml skills; scikit-learn, LightGBM, XGBoost, , Tailwind, Formspree, Cloudinary are in project/role stacks.
 \resumeItem{\textbf{Languages:} Python, C/C++, Java, JavaScript, Rust, SQL}
 \resumeItem{\textbf{Machine Learning \& Data Analysis:} PyTorch, scikit-learn, LightGBM, XGBoost, Tableau, Data Visualization}
-\resumeItem{\textbf{Software Development \& Web:} Linux, FastAPI, Next.js, React, Tailwind CSS, Vercel, pytest, OpenMCT}
+\resumeItem{\textbf{Software Development \& Web:} Linux, FastAPI, Next.js, React, Tailwind CSS, Vercel, pytest}
 \resumeSkillListEnd
 
 \section{Experience}
 \resumeSubHeadingListStart
-\resumeSubheading{ECLAIR, UT Austin}{Sep 2026 -- Present}{Software Developer}{}
+\resumeSubheading{Project Advance Austin}{Aug 2026 -- Present}{Project Management \& Data Analytics}{}
 \resumeItemListStart
-\resumeItem{Developer on Project AMAZE, an autonomous Crazyflie drone project with a team of 15+; on the dashboard team that displays real-time drone telemetry in OpenMCT.} % FLAG: recalled (confirmed by user 2026-10-05; 15+ supplied by user 2026-10-28, YAML says ~15). 'real-time' per experience/eclair-2026.md ('live')
-\resumeItem{Own the backend architecture between the drone and the frontends and have taken responsibility for most dashboard design decisions.} % FLAG: recalled (confirmed by user)
-\resumeItem{Designed a standalone Python telemetry bridge: a Crazyflie source thread feeding an asyncio hub, served to multiple web clients through a FastAPI REST dictionary endpoint and a WebSocket stream; chose a separate process over modifying OpenMCT to avoid bloating it.} % FLAG: recalled (separate-process decision; confirmed by user); architecture verified in SPEC.md (spec only, not implemented: 'designed', not 'built')
-\resumeItem{Applied SDD with AI assistance: 162-line spec with 12 acceptance criteria, a fake-source mode for hardware-free testing, and bounded per-client queues for slow-client isolation.} % spec facts verified (commit 64cf533); 'SDD' term supplied by user 2026-10-28
+\resumeItem{Migrating a nonprofit's fragmented Access and Excel program records into one consolidated database on a 5-student team, deduplicating and normalizing records to support repeatable yearly updates.} % approved technical wording, experience/project-advance-austin-2026.md (user 2026-11-13; slight embellishment accepted)
+\resumeItem{Building a Tableau geospatial map of program data, grouping children by county and state and mothers by prison facility with mother--child distances, to support donor fundraising.} % approved technical wording, experience/project-advance-austin-2026.md (user 2026-11-13; slight embellishment accepted)
+\resumeItem{Own the build of a React/TypeScript website with a Node.js/Express and PostgreSQL backend that embeds the map, due March 2027.} % approved technical wording, experience/project-advance-austin-2026.md (user 2026-11-13; slight embellishment accepted); stack planned, not built
 \resumeItemListEnd
 
 \resumeSubheading{Getfertilizerwiser}{Feb 2026 -- May 2026}{Freelance Web Developer}{Austin, TX}
@@ -39,14 +38,16 @@
 \resumeItem{Structured client content such as team bios, events, and sponsors into typed static data models, integrated Formspree and Cloudinary for form handling and media delivery, and deployed to production on Vercel.} % FLAG: reference-only
 \resumeItemListEnd
 
-\resumeSubheading{Project Advance Austin}{Aug 2026 -- Present}{Project Management \& Data Analytics}{}
+\resumeSubheading{Austin Spanish First AV}{Jul 2026 -- Present}{Subdirector}{}
 \resumeItemListStart
-\resumeItem{Building an interactive geospatial data analysis tool in Tableau that maps coordinates and distances between incarcerated mothers and their children across Texas and the U.S. to support nonprofit fundraising.} % FLAG: reference-only (bullet content); org, title, dates, Tableau verified in timeline
+\resumeItem{Lead a 10+ member technical team delivering audio/visual experiences for 400+ weekly attendees.}
+\resumeItem{Redesigned audio and live-streaming infrastructure, growing online viewership by 50\%.}
 \resumeItemListEnd
 
 \resumeSubheading{Code2College}{Jun 2026 -- Jul 2026}{Course Instructor}{Remote}
 \resumeItemListStart
 \resumeItem{Instructed 24+ students over an 18-session curriculum, with 95\% average attendance and 97\% average quiz score.}
+\resumeItem{Taught software development fundamentals: Python programming, object-oriented design, error handling, and basic data management.} % FLAG: reference-only (confirmed by user 2026-10-05)
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -67,6 +68,7 @@
 \resumeProjectHeading{\textbf{VibeDungeon} $|$ \emph{AI Agent-Driven Game (Python, pytest)}}{May 2026 -- Jun 2026}
 \resumeItemListStart
 \resumeItem{Solo-designed every system of a Python game, from the engine to the agent architecture and tool validation layer, keeping the LLM agents isolated from core game logic.}
+\resumeItem{Validated every LLM tool call against numeric ranges and enum allowlists, returning rejected calls as errors so the model self-corrects.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
